@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: red;
+            width: 700px;
+            height: 700px;
+            margin-top: 10px;
+            text-align: center;
+            color: white;
+            margin-left: 520px;
+        }
+        input
+        {
+            width: 420px;
+            height: 50px;
+            border: 4px solid green ;
+            border-radius: 5px;
+        }
+        button {
+  background-color: green; 
+  width: 180px;
+  height: 40px;
+
+
+}
+
+.button:hover {
+  background-color: #008CBA;
+  color: white;
+}
+fieldset
+{
+    width: auto;
+    height: 50px;
+    border: 3px solid  green;
+    border-radius: 3px;
+    text-align: center;
+}
+#time{
+    margin-left: 35px;
+}
+    </style>
+</head>
+<body style="background-color: grey;">
+<div>
+    <h1> To Calculate Rate Of Interest</h1>
+    <Label>Enter a Principal Amount</Label><br>
+    <input type="text" id="pamt" placeholder="Enter a Principal Amount"><span>&#8377;</span>
+    <br>
+    <br>
+    <label for="">Enter Rate Of Interest</label><br>
+    <input type="text" id="roi" placeholder="Enter a rate of interestt"><span>%</span><br><br>
+    <label for="">Enter a Time</label><br>
+    <input type="text" id="time" placeholder="Enter a years"><span>Year(s)</span><br><br>
+    <button onclick="compute()">Calculate</button><br><br>
+    <fieldset> <legend>After Calculating Rate Of Interest</legend>
+        <output id="result"></output>
+    </fieldset>
+
+</div>
+<script>
+    function compute()
+    {
+        let p, r,t, si; //local variable
+        p=pamt.value;
+        t=time.value;
+         r=roi.value;
+         si=p*r*t/100;
+         result.value="Simple Interest Aount " +si;
+         
+
+        
+    }
+</script>
+
+    
+</body>
+</html>
